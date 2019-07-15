@@ -17,9 +17,9 @@ public class MakeChange
 	public static void doTransaction(Scanner input)
 	{
 		double price, cash, changetotal;
-		System.out.println("Hello there, please enter the price of the item you are purchasing in dollars and cents: ");
+		System.out.print("Hello there, please enter the price of the item you are purchasing in dollars and cents: ");
 		price = input.nextDouble();
-		System.out.println("Great, how much money are you giving me in dollars and cents please? ");
+		System.out.print("Great, how much money are you giving me in dollars and cents please? ");
 		cash = input.nextDouble();
 		changetotal = cash - price;
 
