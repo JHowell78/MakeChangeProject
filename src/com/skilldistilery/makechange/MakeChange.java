@@ -16,8 +16,7 @@ public class MakeChange
 	public static void doTransaction(Scanner input)
 	{
 		double price, cash, changetotal;
-		System.out.println("Hello there, how much is the price of the widget you are purchasing? ");
-		System.out.println("Plenter enter the price of your item in dollars and cents ");
+		System.out.println("Hello there, please enter the price of the item you are purchasing in dollars and cents: ");
 		price = input.nextDouble();
 		System.out.println("Great, how much money are you giving me in dollars and cents please? ");
 		cash = input.nextDouble();
@@ -26,7 +25,6 @@ public class MakeChange
 		if (cash < price)
 		{
 			System.out.println("Sorry that is not enough money for the widget.");
-			//doTransaction(input);
 		}
 		if (cash > price)
 		{
@@ -41,8 +39,7 @@ public class MakeChange
 	{
 		int TwentyDollarBills = 0, TenDollarBills = 0, FiveDollarBills = 0, DollarBills = 0;
 		double Pennies = 0, Nickels = 0, Dimes = 0, Quarters = 0;
-		System.out.println("Thanks for your purchase ");
-		System.out.print("And your total change is: $ ");
+		System.out.print("Thanks for your purchase, and your total change back is: $ ");
 		System.out.printf("%.2f%n", changetotal);
 		changetotal = changetotal * 100 + .005; // convert all change into pennies and fixes penny remainder
 		TwentyDollarBills =(int) (changetotal / 2000);
@@ -78,7 +75,7 @@ public class MakeChange
 		changetotal = changetotal % 25;
 		if (Quarters > 0)
 		{
-			System.out.printf("%.0f", Quarters); // print f %f fixes double decimal points
+			System.out.printf("%.0f", Quarters); // print f %f removes the decimal points from the double type values
 			System.out.println(" quarters");
 		}
 		Dimes = (int) (changetotal / 10);
