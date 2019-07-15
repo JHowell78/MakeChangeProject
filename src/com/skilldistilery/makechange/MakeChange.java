@@ -13,6 +13,7 @@ public class MakeChange
 
 		kb.close();
 	}
+
 	public static void doTransaction(Scanner input)
 	{
 		double price, cash, changetotal;
@@ -35,6 +36,7 @@ public class MakeChange
 			System.out.println("Exact change! Thank you and have a nice day!");
 		}
 	}
+
 	public static void changeMethod(double changetotal)
 	{
 		int TwentyDollarBills = 0, TenDollarBills = 0, FiveDollarBills = 0, DollarBills = 0;
@@ -42,12 +44,13 @@ public class MakeChange
 		System.out.print("Thanks for your purchase, and your total change back is: $ ");
 		System.out.printf("%.2f%n", changetotal);
 		changetotal = changetotal * 100 + .005; // convert all change into pennies and fixes penny remainder
-		TwentyDollarBills =(int) (changetotal / 2000);
+		TwentyDollarBills = (int) (changetotal / 2000);
 		changetotal = changetotal % 2000;
 		if (TwentyDollarBills > 1)
 		{
 			System.out.println(TwentyDollarBills + " twenty dollar bills, ");
-		}else if (TwentyDollarBills == 1) {
+		} else if (TwentyDollarBills == 1)
+		{
 			System.out.println(TwentyDollarBills + " twenty dollar bill, ");
 		}
 		TenDollarBills = (int) (changetotal / 1000);
