@@ -15,6 +15,6 @@ The user input for the price and the amount tendered must be numbers.
 * Atom
 
 
-### Strategy
+### Plan
 
 For the making change method I converted the change amount into pennies divided the change in pennies by how many pennies per denomination (ex change/500 pennies for a 5 dollar bill) and calculated the remainder using the modulus of the divisor for each denomination (remainder = % 500 for a 5 dollar bill) and pass that new amount of change down to the next smallest denomination until the change equals zero.
